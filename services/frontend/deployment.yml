@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      name: frontend
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: ghcr.io/akalanka47000/pharmaceutical-frontend:035bf7c4d3b560a1f386b19ec831b3f62985d1aa-1
+          envFrom:
+            - secretRef:
+                name: frontend-secret
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 20m
+              ephemeral-storage: 1Gi
+              memory: 128Mi

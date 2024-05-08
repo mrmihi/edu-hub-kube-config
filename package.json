@@ -1,0 +1,9 @@
+{
+  "name": "pharmaceutical-kube-config",
+  "version": "1.0.0",
+  "scripts": {
+    "seal-secrets": "sh ./scripts/seal-secrets.sh"
+  },
+  "keywords": [],
+  "license": "MIT"
+}
