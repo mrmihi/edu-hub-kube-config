@@ -25,7 +25,7 @@ spec:
           image: ghcr.io/mrmihi/edu-hub-frontend:26a5452126abeeca92864dc05f83c941bddfda9b-1
           envFrom:
             - secretRef:
-                name: frontend-secret
+                name: frontend-service-secret
           ports:
             - containerPort: 80
           resources:

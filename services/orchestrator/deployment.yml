@@ -26,7 +26,7 @@ spec:
           image: ghcr.io/mrmihi/edu-hub-orchestrator:26a5452126abeeca92864dc05f83c941bddfda9b-1
           envFrom:
             - secretRef:
-                name: orchestrator-secret
+                name: orchestrator-service-secret
           ports:
             - containerPort: 8080
           livenessProbe:
