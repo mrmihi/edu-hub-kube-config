@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ghcr.io/mrmihi/edu-hub-frontend:035bf7c4d3b560a1f386b19ec831b3f62985d1aa-1
+          image: ghcr.io/mrmihi/edu-hub-frontend:26a5452126abeeca92864dc05f83c941bddfda9b-1
           envFrom:
             - secretRef:
                 name: frontend-secret
