@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: auth-service
-          image: ghcr.io/akalanka47000/pharmaceutical-auth-service:3e8749f240308773af4b0508a9245f9dd91c2ecd-1
+          image: ghcr.io/mrmihi/edu-hub-auth-service:3e8749f240308773af4b0508a9245f9dd91c2ecd-1
           envFrom:
             - secretRef:
                 name: auth-service-secret
