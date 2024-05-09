@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: admin-service
-          image: ghcr.io/akalanka47000/pharmaceutical-admin-service:3e8749f240308773af4b0508a9245f9dd91c2ecd-1
+          image: ghcr.io/mrmihi/edu-hub-admin-service:c9a57936910cf8dd8e14136e759a31345d8ce4b8-1
           envFrom:
             - secretRef:
                 name: admin-service-secret
