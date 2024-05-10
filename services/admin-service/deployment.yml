@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: admin-service
-          image: ghcr.io/mrmihi/edu-hub-admin-service:26a5452126abeeca92864dc05f83c941bddfda9b-1
+          image: ghcr.io/mrmihi/edu-hub-admin-service:aaffef86ea10359d1997659aef4df804022b4d3c-1
           envFrom:
             - secretRef:
                 name: admin-service-secret
