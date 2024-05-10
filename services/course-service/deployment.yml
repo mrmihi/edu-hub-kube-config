@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: course-service
-          image: ghcr.io/mrmihi/edu-hub-course-service:26a5452126abeeca92864dc05f83c941bddfda9b-1
+          image: ghcr.io/mrmihi/edu-hub-course-service:c0a0454072135b9532a82b6a94b37b95347e48e1-2
           envFrom:
             - secretRef:
                 name: course-service-secret
