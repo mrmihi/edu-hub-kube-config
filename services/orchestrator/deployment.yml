@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: orchestrator
-          image: ghcr.io/mrmihi/edu-hub-orchestrator:922a5c9459c60a077655e5aeac30b06657d30fb1-1
+          image: ghcr.io/mrmihi/edu-hub-orchestrator:3d55576ffa500ec26e4038978d0722f2dbc55788-1
           envFrom:
             - secretRef:
                 name: orchestrator-service-secret
