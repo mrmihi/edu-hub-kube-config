@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: feedback-service
-          image: ghcr.io/mrmihi/edu-hub-feedback-service:922a5c9459c60a077655e5aeac30b06657d30fb1-1
+          image: ghcr.io/mrmihi/edu-hub-feedback-service:a0f46c58f66a843e03c07576ad7167baea2fcfb4-1
           envFrom:
             - secretRef:
                 name: feedback-service-secret
