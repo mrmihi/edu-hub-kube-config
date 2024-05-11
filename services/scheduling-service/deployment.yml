@@ -1,0 +1,52 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scheduling-service
+  labels:
+    app: scheduling-service
+spec:
+  selector:
+    matchLabels:
+      app: scheduling-service
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      name: scheduling-service
+      labels:
+        app: scheduling-service
+    spec:
+      containers:
+        - name: scheduling-service
+          image: ghcr.io/mrmihi/edu-hub-scheduling-service:3d55576ffa500ec26e4038978d0722f2dbc55788-1
+          envFrom:
+            - secretRef:
+                name: scheduling-service-secret
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /system/health
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 3
+          readinessProbe:
+            httpGet:
+              path: /system/health
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 3
+          resources:
+            requests:
+              cpu: 20m
+              ephemeral-storage: 1Gi
+              memory: 128Mi
