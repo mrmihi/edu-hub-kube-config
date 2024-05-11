@@ -2,13 +2,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: orchestrator
+  name: scheduling-service
   labels:
-    app: orchestrator
+    app: scheduling-service
 spec:
   selector:
     matchLabels:
-      app: orchestrator
+      app: scheduling-service
   replicas: 1
   strategy:
     type: RollingUpdate
@@ -17,16 +17,16 @@ spec:
       maxSurge: 1
   template:
     metadata:
-      name: orchestrator
+      name: scheduling-service
       labels:
-        app: orchestrator
+        app: scheduling-service
     spec:
       containers:
-        - name: orchestrator
-          image: ghcr.io/mrmihi/edu-hub-orchestrator:f9781faec94b9f679a494128c3d4d5838586f23b-1
+        - name: scheduling-service
+          image: ghcr.io/mrmihi/edu-hub-scheduling-service:3d55576ffa500ec26e4038978d0722f2dbc55788-1
           envFrom:
             - secretRef:
-                name: orchestrator-service-secret
+                name: scheduling-service-secret
           ports:
             - containerPort: 8080
           livenessProbe:
