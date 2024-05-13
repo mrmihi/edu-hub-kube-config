@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: payment-service
-          image: ghcr.io/mrmihi/edu-hub-payment-service:922a5c9459c60a077655e5aeac30b06657d30fb1-1
+          image: ghcr.io/mrmihi/edu-hub-payment-service:e1d15594f077660699c784c0424f5a498039eca2-1
           envFrom:
             - secretRef:
                 name: payment-service-secret
