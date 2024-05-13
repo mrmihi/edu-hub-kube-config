@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: scheduling-service
-          image: ghcr.io/mrmihi/edu-hub-scheduling-service:f9781faec94b9f679a494128c3d4d5838586f23b-2
+          image: ghcr.io/mrmihi/edu-hub-scheduling-service:6909b24dbd5f3748956afbecc646d4352c60a419-1
           envFrom:
             - secretRef:
                 name: scheduling-service-secret
