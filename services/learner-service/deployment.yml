@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: learner-service
-          image: ghcr.io/mrmihi/edu-hub-learner-service:1a5928f269fc7ae1325d5f0ba8ed7e21a1f1a31e-1
+          image: ghcr.io/mrmihi/edu-hub-learner-service:0416fd9aaabd5370b273c905e9bca8873a697c80-1
           envFrom:
             - secretRef:
                 name: learner-service-secret
