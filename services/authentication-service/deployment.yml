@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: authentication-service
-          image: ghcr.io/mrmihi/edu-hub-authentication-service:6683f1e947690f49cc81dc94d90e7e53ba4228a9-1
+          image: ghcr.io/mrmihi/edu-hub-authentication-service:905b0c42a4297f38f7e32c0908a115d6e5e307b2-1
           envFrom:
             - secretRef:
                 name: authentication-service-secret
